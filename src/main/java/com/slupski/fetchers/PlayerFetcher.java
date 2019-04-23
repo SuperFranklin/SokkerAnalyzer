@@ -60,7 +60,7 @@ public class PlayerFetcher {
     }
 
     private int getIntContent(Element playerNode, String tagName) {
-        return Integer.valueOf(playerNode.getElementsByTagName(tagName).item(0).getTextContent());
+        return Integer.valueOf(getTextContent(playerNode, tagName));
     }
 
     private Document makeDocument(ResponseEntity<String> response) throws ParserConfigurationException, SAXException, IOException {
