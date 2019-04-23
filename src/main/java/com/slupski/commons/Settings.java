@@ -12,6 +12,9 @@ public class Settings {
     private static final String DATABASE_USER = "database.user";
     private static final String DATABASE_PASSWORD = "database.password";
     private static final String DATABASE_SCHEMA = "database.schema";
+    private static final String BASIC_AUTH_USER = "basicauth.user";
+    private static final String BASIC_AUTH_PASSWORD = "basicauth.password";
+
 
     @Autowired
     Environment environment;
@@ -30,6 +33,14 @@ public class Settings {
 
     public String getDatabaseSchema(){
         return environment.getProperty(DATABASE_SCHEMA);
+    }
+
+    public String getBasicAuthUser(){
+        return environment.getProperty(BASIC_AUTH_USER);
+    }
+
+    public String getBasicAuthPassword(){
+        return environment.getProperty(BASIC_AUTH_PASSWORD);
     }
 }
 
