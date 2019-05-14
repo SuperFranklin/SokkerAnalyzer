@@ -15,4 +15,8 @@ public abstract class Parser<T> {
     protected int getIntContent(Element playerNode, String tagName) {
         return Integer.valueOf(getTextContent(playerNode, tagName));
     }
+
+    protected float getFloatContent(Element playerNode, String tagName) {
+        return Float.valueOf(getTextContent(playerNode, tagName));
+    }
 }
